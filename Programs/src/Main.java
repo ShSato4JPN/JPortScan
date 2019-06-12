@@ -2,7 +2,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// 
 		String ip = "localhost";
 
 		System.out.println("Scanning Host Addr is " + ip);

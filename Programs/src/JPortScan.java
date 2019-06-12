@@ -16,10 +16,10 @@ public class JPortScan {
 	public int[][] startScan() {
 		ExecutorService service = Executors.newCachedThreadPool();
 		try {
+			System.out.println("START PORTSCANNING... \n");
 			for (int i = 0; i <= MAX_PORT; i++) {
 				Future<Integer> f = service.submit(new portScanTask(hostName, i));
 				resAry[i][0] = f.get().intValue();
-				System.out.println(i);
 			}
 		} catch(Exception ex) {
 			System.out.println("処理中にエラーが発生");
